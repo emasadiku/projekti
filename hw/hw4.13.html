@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/hw4.13.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Reservation Form</h1>
+        <h4>* denotes mandatory</h4>
+        
+        <form>
+            <div class="form-group">
+                <label for="fullname">Full name *:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="package">Select tour package *:</label>
+                <select id="package" name="package" required>
+                    <option value="Goa">Goa</option>
+                    <option value="Bali">Bali</option>
+                    <option value="Paris">Paris</option>
+                    <option value="NewYork">New York</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="arrival">Arrival date *:</label>
+                <input type="date" id="arrival" name="arrival" required>
+            </div>
+
+            <div class="form-group">
+                <label for="persons">Number of persons *:</label>
+                <input type="number" id="persons" name="persons" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <p>What would you want to avail?*:</p>
+                <input type="checkbox" id="boarding" name="services" value="Boarding">
+                <label for="boarding">Boarding</label><br>
+                <input type="checkbox" id="fooding" name="services" value="Fooding">
+                <label for="fooding">Fooding</label><br>
+                <input type="checkbox" id="sightseeing" name="services" value="Sightseeing">
+                <label for="sightseeing">Sightseeing</label>
+            </div>
+
+            <div class="form-group">
+                <label for="coupon">Discount coupon code:</label>
+                <input type="text" id="coupon" name="coupon">
+            </div>
+
+            <div class="form-group">
+                <p>Terms and conditions*:</p>
+                <input type="radio" id="agree" name="terms" value="I Agree" required>
+                <label for="agree">I Agree</label><br>
+                <input type="radio" id="disagree" name="terms" value="I Disagree" required>
+                <label for="disagree">I Disagree</label>
+            </div>
+
+            <button type="submit" onclick="hw414.html">Complete Reservation</button>
+        </form>
+    </div>
+</body>
+</html>

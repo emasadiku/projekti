@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Rome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x300') no-repeat center center/cover;
+            color: white;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            margin-bottom: 3px;
+            
+        }
+
+        .hero h4 {
+            font-size: 1.5rem;
+            margin: 0;
+            font-family: 'Lucida Sans';
+        }
+
+        .container {
+            padding: 30px;
+        }
+        .info-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        .info-section img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            flex: 1;
+        }
+        .info-section.flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar-nav {
+        margin-left: auto;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="blogg.html">agency_name</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="blogg.html#about-us">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="blogg.html#explore">Explore</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tours</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="individual_tours.html">Individual Tours</a></li>
+                  <li><a class="dropdown-item" href="guided_tours.html">Guided Tours</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="blogg.html#contact-us">Contact Us</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="hero">
+        <h1>Explore Vienna</h1>
+        <br>
+        <h4>Everything you need to know before visiting</h4>
+    </div>
+
+
+    <section class="container">
+
+        <div class="info-section">
+            <div class="info">
+                <h5>Essential Info</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui.</p>
+            </div>
+            <img src="https://via.placeholder.com/400x300" alt="Essential Info Image">
+        </div>
+
+
+        <div class="info-section flex-row-reverse">
+            <div class="info">
+                <h5>Travel Tips</h5>
+                <p>Quisque ac magna a ligula vehicula viverra. Nullam nec felis ac lectus aliquam tincidunt ut at velit.</p>
+            </div>
+            <img src="https://via.placeholder.com/400x300" alt="Travel Tips Image">
+        </div>
+
+
+        <div class="info-section">
+            <div class="info">
+                <h5>History & Culture</h5>
+                <p>Mauris at lectus vel ex euismod vehicula. Fusce ut massa et sem malesuada tincidunt in ut erat.</p>
+            </div>
+            <img src="https://via.placeholder.com/400x300" alt="History and Culture Image">
+        </div>
+
+        <div class="info-section flex-row-reverse">
+            <div class="info">
+                <h5>Top Attractions</h5>
+                <p>Curabitur non risus libero. Fusce nec odio eu mi blandit efficitur sed eu turpis.</p>
+            </div>
+            <img src="https://via.placeholder.com/400x300" alt="Top Attractions Image">
+        </div>
+
+        <div class="info-section">
+            <div class="info">
+                <h5>Food & Drinks</h5>
+                <p>Donec sollicitudin, mi a aliquam luctus, mauris urna malesuada lectus, vel tristique mi ipsum eget leo.</p>
+            </div>
+            <img src="https://via.placeholder.com/400x300" alt="Food and Drinks Image">
+        </div>
+    </section>
+
+
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>Follow Us: 
+                <a href="#">Instagram</a> 
+                <a href="#">Facebook</a> 
+                <a href="#">LinkedIn</a>
+            </p>
+            <p>&copy; 2024 PhotoStudio. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

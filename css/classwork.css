@@ -1,0 +1,35 @@
+a{
+    text-decoration: dotted;
+    padding: 20px 25px;
+}
+
+a:link{
+    color: midnightblue;
+}
+
+a:visited{
+    color: lightseagreen;
+}
+
+a:focus {
+    border-bottom: 1 px solid;
+    background: red;
+}
+
+a:hover {
+    border: 1px solid;
+    background: lightblue;
+}
+
+a:active {
+    background: lightskyblue;
+    color: cadetblue;
+}
+h1{ border: medium ridge red}
+
+h3 {
+    text-align: center;
+    border-style: dotted;
+    border-width: 10px;
+    border-color:brown ;
+}

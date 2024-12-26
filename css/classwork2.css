@@ -1,0 +1,22 @@
+.same{
+    background-color: lightskyblue;
+    clear: both;
+    border: 1px solid black;
+}
+
+
+
+#menu{
+    background-color: lightgray;
+    float: left;
+    border: 1px solid black;
+    width: 30%;
+}
+
+#content{
+    background-color: lightcyan;
+    float: right;
+    border: 1px solid black;
+    width: 69.56%;
+    height: 147.95px;
+}

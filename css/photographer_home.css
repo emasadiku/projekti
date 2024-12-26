@@ -1,0 +1,10 @@
+/* About Us Custom Styles */
+section h1, section h3 {
+    font-weight: 600;
+}
+
+img.rounded-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}

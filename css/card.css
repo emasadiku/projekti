@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7edee;
+}
+
+.card {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    background-color: #fff;
+}
+
+.card-image {
+    width: 40%;
+    object-fit: cover;
+}
+
+.card-content h3 {
+    align-items: right;
+}

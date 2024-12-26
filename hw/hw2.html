@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+    <title>Homework 2</title>
+</head>
+<body>
+
+    <p>Ushtrimi 13</p>
+    <h3>Imazhe</h3>
+    <div style="text-align: center;">
+        <div style="margin-bottom: 20px;">
+            <h4>Foto 1</h4>
+            <img src="img/3d-pink-flower-isolated-transparent-background_191095-16624.avif" alt="lule" width="150" height="150" style="margin-right: 20px;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h4>Image 2 Title</h4>
+            <img src="img/484853-visuels-disneyland-paris-chateau.jpg" alt="disney" width="150" height="150" style="margin-right: 20px;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h4>Image 3 Title</h4>
+            <img src="img/lewis-hamilton-mercedes-f1-w15.jpg" alt="f1" width="150" height="150" style="margin-right: 20px;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h4>Image 4 Title</h4>
+            <img src="img/image.jpg" alt="paris" width="150" height="150" style="margin-right: 20px;">
+        </div>
+    </div>
+    <p>Ushtrimi 14</p>
+    <h3>Foto me kornize</h3>
+    <img src="img/lewis-hamilton-mercedes-f1-w15.jpg" alt="f1" width="200" height="200" style="border: 2px solid black;">
+
+    <p>Ushtrimi 15</p>
+    <a href="https://www.google.com" target="_blank">
+        <img src="img/Google__G__logo.svg.png" alt="kliko imazhin per te hapur google" width="150" height="150">
+    </a>
+
+    <p>Ushtrimi 16</p>
+    <h2>Orari</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>E hene</th>
+                <th>E marte</th>
+                <th>E merkure</th>
+                <th>E enjte</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Anglisht</td>
+                <td>Matematike</td>
+                <td>Biznes</td>
+                <td>Letersi</td>
+            </tr>
+            <tr>
+                <td>Fizike</td>
+                <td>Programim</td>
+                <td>Matematike</td>
+                <td>Biologji</td>
+            </tr>
+            <tr>
+                <td>Matematike</td>
+                <td>Anglisht</td>
+                <td>Gjuhe</td>
+                <td>Gjermanisht</td>
+            </tr>
+            <tr>
+                <td>Letersi</td>
+                <td>Biologji</td>
+                <td>Matematike</td>
+                <td>Programim</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Ushtrimi 17</p>
+    <h1 style="text-align: center;">Travel Reservation Form</h1>
+    <h4 style="text-align: center;">* denotes mandatory</h4>
+
+    <form>
+        <!-- Full Name Field -->
+        <label for="fullname">Full name *:</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email *:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Select Tour Package -->
+        <label for="package">Select tour package *:</label>
+        <select id="package" name="package" required>
+            <option value="Goa">Goa</option>
+            <option value="Bali">Bali</option>
+            <option value="Paris">Paris</option>
+            <option value="NewYork">New York</option>
+        </select>
+        <br><br>
+
+        <!-- Arrival Date -->
+        <label for="arrival">Arrival date *:</label>
+        <input type="date" id="arrival" name="arrival" required>
+        <br><br>
+
+        <!-- Number of Persons -->
+        <label for="persons">Number of persons *:</label>
+        <input type="number" id="persons" name="persons" min="1" required>
+        <br><br>
+
+        <!-- Services to Avail -->
+        <p>What would you want to avail?*:</p>
+        <input type="checkbox" id="boarding" name="services" value="Boarding">
+        <label for="boarding">Boarding</label>
+        <br>
+        <input type="checkbox" id="fooding" name="services" value="Fooding">
+        <label for="fooding">Fooding</label>
+        <br>
+        <input type="checkbox" id="sightseeing" name="services" value="Sightseeing">
+        <label for="sightseeing">Sightseeing</label>
+        <br><br>
+
+        <!-- Discount Coupon Code -->
+        <label for="coupon">Discount coupon code:</label>
+        <input type="text" id="coupon" name="coupon">
+        <br><br>
+
+        <!-- Terms and Conditions -->
+        <p>Terms and conditions*:</p>
+        <input type="radio" id="agree" name="terms" value="I Agree" required>
+        <label for="agree">I Agree</label>
+        <br>
+        <input type="radio" id="disagree" name="terms" value="I Disagree" required>
+        <label for="disagree">I Disagree</label>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Complete Reservation</button>
+    </form>
+
+
+</body>
+</html>

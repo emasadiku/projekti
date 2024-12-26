@@ -1,0 +1,15 @@
+.same-size {
+    min-height: 100%; /* Ensures cards stretch to the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.same-size img {
+    height: 200px; /* Standardizes image height */
+    object-fit: cover; /* Ensures images fit within the specified height */
+}
+
+.same-size .card-body {
+    flex-grow: 1; /* Distributes card body space evenly */
+}

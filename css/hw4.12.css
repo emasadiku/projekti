@@ -1,0 +1,78 @@
+.container {
+    width: 80%;
+    background-color: #D4BEE4;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: rgb(237, 223, 245);
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #3B1E54;
+
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header p {
+    margin: 5px 0;
+}
+
+.contact {
+    background-color: rgb(237, 223, 245);
+    padding: 10px;
+    border: 2px solid #3B1E54;
+    margin-top: 20px;
+
+}
+
+.contact h2 {
+    margin-top: 0;
+}
+
+
+.experience {
+    background-color: rgb(237, 223, 245);
+    padding: 10px;
+    border: 2px solid #3B1E54;
+    margin-top: 20px;
+}
+
+.experience h2 {
+    margin-top: 0;
+}
+
+
+.education {
+    background-color: rgb(237, 223, 245);
+    padding: 10px;
+    border: 2px solid #3B1E54; 
+    margin-top: 20px;
+}
+
+.education h2 {
+    margin-top: 0;
+}
+
+.skills {
+    background-color: rgb(237, 223, 245);
+    padding: 10px;
+    border: 2px solid #3B1E54;
+    margin-top: 20px;
+}
+
+.skills h2 {
+    margin-top: 0;
+}
+
+.skills ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+
+

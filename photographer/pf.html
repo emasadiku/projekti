@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .card {
+            height: 100%;
+        }
+        .card-img-top {
+            height: 70%; 
+            object-fit: cover;
+        }
+        .card-body {
+            flex-grow: 1; 
+        }
+        .h-100 {
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; 
+            height: 400px; 
+        }
+        .carousel-image {
+            height: 500px;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        h1, p {
+            margin: 0;
+            color: #fff;
+        }
+        #about-us {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        #about-us h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        #about-us p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        #about-us .btn-dark {
+            background-color: #000;
+            border: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        #about-us .btn-dark:hover {
+            background-color: #444;
+        }
+        #about-us img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">PhotoStudio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reserve.html">Reserve a Photographer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="pexels-transtudios-3082764.jpg" class="d-block w-100 carousel-image" alt="...">
+                        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                            <h1>Welcome to Our Photography Studio</h1>
+                            <p>Capturing Moments That Last Forever</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Event-Photography.jpg" class="d-block w-100 carousel-image" alt="...">
+                        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                            <h1>Welcome to Our Photography Studio</h1>
+                            <p>Capturing Moments That Last Forever</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="photojournalistic-wedding-photography-dancing-009-1024x683.jpg" class="d-block w-100 carousel-image" alt="...">
+                        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                            <h1>Welcome to Our Photography Studio</h1>
+                            <p>Capturing Moments That Last Forever</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="about-us" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="about-us-photo.jpg" alt="About Us" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-dark mb-4">About Us</h2>
+                    <p>
+                        Welcome to our photography studio! We are passionate about capturing the beauty of every moment, turning them into timeless memories you can cherish forever. 
+                    </p>
+                    <p>
+                        With years of experience and a dedicated team of talented photographers, we specialize in portrait, event, and landscape photography. Whether it's your special day, a corporate event, or simply a beautiful moment, we aim to create visuals that tell your unique story.
+                    </p>
+                    <p>
+                        Our mission is to blend creativity with professionalism, offering you a seamless and enjoyable photography experience. Let us bring your vision to life—one photo at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="container my-5">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100" >
+                    <img src="Printique-SOURCE-Printique-Gear.webp" class="card-img-top" alt="Printing Photos">
+                    <div class="card-body">
+                        <h5 class="card-title">Photo Printing</h5>
+                        <p class="card-text">High-quality photo printing services for all occasions.</p>
+                        <a href="photoprinting.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="Custom Polaroid Photo Keychain - ♡ Emoji _ Yes _ No Charm.jpeg" class="card-img-top" alt="Personalized">
+                    <div class="card-body">
+                        <h5 class="card-title">Personalized Mugs, Shirts, Tote Bags, Puzzles</h5>
+                        <p class="card-text">Make your drink special with custom mugs featuring your favorite photos or designs.</p>
+                        <a href="personalized.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="eletecpro 12x12 Picture Frames … curated on LTK.jpeg" class="card-img-top" alt="Tablo">
+                    <div class="card-body">
+                        <h5 class="card-title">Tablo Photo</h5>
+                        <p class="card-text">Elevate your home décor with stunning photo frames and tablo prints that capture life's special moments.</p>
+                        <a href="tablo.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p>Phone: 0897867657</p>
+        <p>Email: example@photostudio.com</p>
+        <iframe src="https://maps.google.com/maps?q=YOUR_LOCATION&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>Follow Us: 
+                <a href="#" class="text-white mx-2">Instagram</a> 
+                <a href="#" class="text-white mx-2">Facebook</a> 
+                <a href="#" class="text-white mx-2">LinkedIn</a>
+            </p>
+            <p>&copy; 2024 PhotoStudio. All rights reserved.</p>
+        </div>
+    </footer>
+    </body>
+    </html>
+    
+

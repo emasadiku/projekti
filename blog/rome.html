@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Rome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: url('rome2.1.jpg') no-repeat center center/cover;
+            color: rgb(255, 254, 254);
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            z-index: 1;
+        }
+
+        .hero h4 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            z-index: 1;
+        }
+
+        .container {
+            padding: 60px 30px;
+        }
+
+        .info-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .info-section img {
+            width: 100%;
+            max-width: 450px;
+            height: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h5 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            margin: 8px 0;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="blogg.html">agency_name</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="blogg.html#about-us">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="blogg.html#explore">Explore</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tours</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="individual_tours.html">Individual Tours</a></li>
+                  <li><a class="dropdown-item" href="guided_tours.html">Guided Tours</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="blogg.html#contact-us">Contact Us</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Explore Rome</h1>
+        <h4>Everything you need to know before visiting</h4>
+    </div>
+
+    <section class="container">
+
+        <div class="info-section">
+            <div class="info">
+                <h5>Essential Info</h5>
+                <ul>
+                    <li><strong>Currency:</strong> Euro (€)</li>
+                    <li><strong>Language:</strong> Italian (basic phrases like "Ciao" (Hello), "Grazie" (Thank you), "Per favore" (Please) are helpful)</li>
+                    <li><strong>Time Zone:</strong> Central European Time (CET)</li>
+                    <li><strong>Getting Around:</strong>
+                        <ul>
+                            <li>Metro, buses, and trams are convenient for getting around.</li>
+                            <li>Walking is the best way to explore the historic center.</li>
+                            <li>Taxis are expensive; apps like Free Now or ItTaxi are better for booking.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <img src="rome2.7.jpg" alt="Essential Info Image">
+        </div>
+
+        <div class="info-section">
+            <img src="rome2.3.jpg" alt="Top Attractions in Rome">
+            <div class="info">
+                <h5>Top Attractions</h5>
+                <ul>
+                    <li><strong>Colosseum & Roman Forum:</strong> The iconic amphitheater and nearby ruins of ancient Rome.</li>
+                    <li><strong>Vatican City:</strong> Home to St. Peter’s Basilica, the Sistine Chapel, and the Vatican Museums.</li>
+                    <li><strong>Pantheon:</strong> A remarkably preserved Roman temple with an open dome.</li>
+                    <li><strong>Trevi Fountain:</strong> Toss a coin to ensure a return trip to Rome.</li>
+                    <li><strong>Piazza Navona:</strong> A beautiful square featuring fountains and street performers.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info">
+                <h5>Best Restaurants</h5>
+                <p><strong>For Traditional Roman Cuisine:</strong></p>
+                <ul>
+                    <li>Roscioli: Known for its carbonara and fine Italian deli.</li>
+                    <li>Felice a Testaccio: Famous for cacio e pepe.</li>
+                    <li>Trattoria Pennestri: A modern twist on classic dishes.</li>
+                </ul>
+                <p><strong>Pizza Spots:</strong></p>
+                <ul>
+                    <li>Pizzarium Bonci: Known for its gourmet pizza al taglio (by the slice).</li>
+                    <li>Emma Pizzeria con Cucina: Thin-crust Roman-style pizza.</li>
+                </ul>
+                <p><strong>Gelato Shops:</strong></p>
+                <ul>
+                    <li>Gelateria del Teatro: Unique flavors like sage and raspberry.</li>
+                    <li>Giolitti: One of the oldest and most famous gelaterias.</li>
+                </ul>
+            </div>
+            <img src="rome2.2.jpg" alt="Best Restaurants Image">
+        </div>
+
+        <div class="info-section flex-row-reverse">
+            <div class="info">
+                <h5>Best Time to Visit</h5>
+                <ul>
+                    <li><strong>Spring (April to June):</strong> Ideal weather, blooming flowers, and lively piazzas.</li>
+                    <li><strong>Fall (September to November):</strong> Mild weather, fewer crowds, and harvest festivals.</li>
+                    <li><strong>Avoid:</strong> Summer (July-August) due to heat and crowds; many locals take vacations during this time.</li>
+                </ul>
+            </div>
+            <img src="rome2.6.jpg" alt="Best Time to Visit Image">
+        </div>
+
+        <div class="info-section">
+            <div class="info">
+                <h5>Shopping in Rome</h5>
+                <ul>
+                    <li><strong>Via del Corso:</strong> A major shopping street with international brands and Italian designers.</li>
+                    <li><strong>Via Condotti:</strong> The luxury shopping street near the Spanish Steps.</li>
+                    <li><strong>Campo de' Fiori:</strong> A bustling market where you can buy local goods and souvenirs.</li>
+                </ul>
+            </div>
+            <img src="romeshops.jpg" alt="Shopping in Rome">
+        </div>
+
+        <div class="info-section flex-row-reverse">
+            <div class="info">
+                <h5>Tips for Tourists</h5>
+                <ul>
+                    <li><strong>Plan in Advance:</strong> Book tickets for major attractions like the Colosseum and Vatican Museums online to skip long lines.</li>
+                    <li><strong>Dress Modestly for Churches:</strong> Shoulders and knees must be covered.</li>
+                    <li><strong>Carry Cash:</strong> Many smaller shops and restaurants don’t accept credit cards.</li>                        
+                    <li><strong>Avoid Tourist Traps:</strong>
+                        <ul>
+                            <li>Avoid dining at places with multilingual menus or pushy waiters.</li>
+                            <li>Restaurants in tourist hotspots are usually overpriced.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Be Aware of Pickpockets:</strong> Especially around crowded attractions and public transportation.</li>
+                    <li><strong>Tipping is Optional:</strong> It’s appreciated but not expected, as service is often included in the bill.</li>
+                    <li><strong>Tap Water is Drinkable:</strong> Look for free public fountains called "nasoni."</li>
+                    <li><strong>Use Public Transport Passes:</strong> Get a Roma Pass for unlimited rides and discounted attraction entries.</li>
+                </ul>
+            </div>
+            <img src="rome2.0.jpg" alt="Tips for Tourists Image">
+        </div>
+    
+        <div class="info-section">
+            <div class="info">
+                <h5>Bonus Experiences</h5>
+                <ul>
+                    <li><strong>Day Trips:</strong>
+                        <ul>
+                            <li><strong>Tivoli:</strong> Visit Villa d’Este and Villa Adriana.</li>
+                            <li><strong>Castelli Romani:</strong> Famous for its wine and countryside views.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Food Tours:</strong> Join a guided tour to discover the best local cuisine.</li>
+                    <li><strong>Evening Walks:</strong> Stroll around illuminated landmarks like the Colosseum and Trevi Fountain for a magical experience.</li>
+                </ul>
+            </div>
+            <img src="romeee.jpg" alt="Bonus Experiences Image">
+        </div>
+</section>
+
+</body>
+</html>

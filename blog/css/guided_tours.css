@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Guided Tours Form Section */
+.guided-tours-form {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.guided-tours-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #343a40;
+}
+
+.guided-tours-form p {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.guided-tours-form form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.guided-tours-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.guided-tours-form input,
+.guided-tours-form select,
+.guided-tours-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.guided-tours-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.guided-tours-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Photos Section */
+.guided-tours-form .row img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guided-tours-form .row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0056b3;
+}
+
+/* Navbar */
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.navbar-brand:hover {
+    color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .guided-tours-form {
+        padding: 30px 10px;
+    }
+
+    .guided-tours-form form {
+        padding: 15px;
+    }
+}
