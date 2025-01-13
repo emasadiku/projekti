@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Rome</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family:'Lucida Sans', Verdana, sans-serif;
             line-height: 1.6;
         }
 
@@ -32,7 +33,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: #050b3c43;
         }
 
         .hero h1 {
@@ -57,7 +58,7 @@
             margin-bottom: 40px;
             gap: 20px;
             padding: 20px;
-            background-color: #fff;
+            background-color: #f9f9ff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
@@ -84,7 +85,7 @@
             font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 15px;
-            color: #333;
+            color: #1d365e;
         }
 
         .info ul {
@@ -100,19 +101,108 @@
             margin-left: auto;
             color: #333;
         }
+        .footer {
+            background-color: #0b1038;
+            color: #bfbfdb;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        nav.navbar{
+            background-color: #0b1038;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        nav.navbar .navbar-brand, 
+        nav.navbar .nav-link {
+            color: #dce6f4; 
+        }
+
+        nav.navbar .nav-link:hover {
+            color: #ffffff;
+
+        }
+
+        .navbar-brand{
+            font-family: 'Pacifico', cursive; 
+            font-size: 32px; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title{
+            color: #173c78;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h4 {
+                font-size: 1.2rem;
+            }
+
+            .info-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info {
+                text-align: center;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+
+            nav.navbar .navbar-brand,
+            nav.navbar .nav-link {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h4 {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .info-section img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="blogg.html">agency_name</a>
+          <a class="navbar-brand" href="blogg.html">TripTastic</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link active" href="blogg.html#about-us">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="blogg.html#about-us">About Us</a></li>
               <li class="nav-item"><a class="nav-link" href="blogg.html#explore">Explore</a></li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tours</a>
@@ -123,10 +213,6 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="blogg.html#contact-us">Contact Us</a></li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
     </nav>
@@ -142,14 +228,13 @@
             <div class="info">
                 <h5>Essential Info</h5>
                 <ul>
-                    <li><strong>Currency:</strong> Euro (€)</li>
-                    <li><strong>Language:</strong> Italian (basic phrases like "Ciao" (Hello), "Grazie" (Thank you), "Per favore" (Please) are helpful)</li>
-                    <li><strong>Time Zone:</strong> Central European Time (CET)</li>
-                    <li><strong>Getting Around:</strong>
+                    <li><strong><i>Currency:</i></strong> Euro (€)</li>
+                    <li><strong><i>Language:</i></strong> Italian (basic phrases like "Ciao" (Hello), "Grazie" (Thank you), "Per favore" (Please) are helpful)</li>
+                    <li><strong><i>Getting Around:</i></strong>
                         <ul>
-                            <li>Metro, buses, and trams are convenient for getting around.</li>
-                            <li>Walking is the best way to explore the historic center.</li>
-                            <li>Taxis are expensive; apps like Free Now or ItTaxi are better for booking.</li>
+                            <li>-> Metro, buses, and trams are convenient for getting around.</li>
+                            <li>-> Walking is the best way to explore the historic center.</li>
+                            <li>-> Taxis are expensive; apps like Free Now or ItTaxi are better for booking.</li>
                         </ul>
                     </li>
                 </ul>
@@ -158,7 +243,6 @@
         </div>
 
         <div class="info-section">
-            <img src="rome2.3.jpg" alt="Top Attractions in Rome">
             <div class="info">
                 <h5>Top Attractions</h5>
                 <ul>
@@ -169,23 +253,24 @@
                     <li><strong>Piazza Navona:</strong> A beautiful square featuring fountains and street performers.</li>
                 </ul>
             </div>
+            <img src="rome2.3.jpg" alt="Top Attractions in Rome">
         </div>
 
         <div class="info-section">
             <div class="info">
                 <h5>Best Restaurants</h5>
-                <p><strong>For Traditional Roman Cuisine:</strong></p>
+                <p><strong><i>For Traditional Roman Cuisine:</i></strong></p>
                 <ul>
                     <li>Roscioli: Known for its carbonara and fine Italian deli.</li>
                     <li>Felice a Testaccio: Famous for cacio e pepe.</li>
                     <li>Trattoria Pennestri: A modern twist on classic dishes.</li>
                 </ul>
-                <p><strong>Pizza Spots:</strong></p>
+                <p><strong><i>Pizza Spots:</i></strong></p>
                 <ul>
                     <li>Pizzarium Bonci: Known for its gourmet pizza al taglio (by the slice).</li>
                     <li>Emma Pizzeria con Cucina: Thin-crust Roman-style pizza.</li>
                 </ul>
-                <p><strong>Gelato Shops:</strong></p>
+                <p><strong><i>Gelato Shops:</i></strong></p>
                 <ul>
                     <li>Gelateria del Teatro: Unique flavors like sage and raspberry.</li>
                     <li>Giolitti: One of the oldest and most famous gelaterias.</li>
@@ -194,7 +279,7 @@
             <img src="rome2.2.jpg" alt="Best Restaurants Image">
         </div>
 
-        <div class="info-section flex-row-reverse">
+        <div class="info-section">
             <div class="info">
                 <h5>Best Time to Visit</h5>
                 <ul>
@@ -218,7 +303,7 @@
             <img src="romeshops.jpg" alt="Shopping in Rome">
         </div>
 
-        <div class="info-section flex-row-reverse">
+        <div class="info-section">
             <div class="info">
                 <h5>Tips for Tourists</h5>
                 <ul>
@@ -244,7 +329,7 @@
             <div class="info">
                 <h5>Bonus Experiences</h5>
                 <ul>
-                    <li><strong>Day Trips:</strong>
+                    <li><strong><i>Day Trips:</i></strong>
                         <ul>
                             <li><strong>Tivoli:</strong> Visit Villa d’Este and Villa Adriana.</li>
                             <li><strong>Castelli Romani:</strong> Famous for its wine and countryside views.</li>
@@ -257,6 +342,17 @@
             <img src="romeee.jpg" alt="Bonus Experiences Image">
         </div>
 </section>
+
+<footer class="footer custom-footer">
+    <div class="footercontainer">
+        <p>Follow Us: 
+            <a href="#">Instagram</a> 
+            <a href="#">Facebook</a> 
+            <a href="#">LinkedIn</a>
+        </p>
+        <p>&copy; 2024 TripTastic. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>

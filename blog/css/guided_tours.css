@@ -1,7 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family:'Trebuchet MS',  sans-serif;
+    line-height: 1.6;
+    background-color: #e2f0fb;
 }
 
 .hero h1 {
@@ -10,7 +12,31 @@ body {
     text-align: center;
 }
 
-/* Guided Tours Form Section */
+
+.navbar-nav {
+    margin-left:auto;
+}
+
+nav.navbar{
+    background-color: #0b1038;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+nav.navbar .navbar-brand, 
+nav.navbar .nav-link {
+    color: #dce6f4; 
+}
+
+nav.navbar .nav-link:hover {
+    color: #ffffff;
+}
+
+.navbar-brand{
+    font-family: 'Pacifico', cursive; 
+    font-size: 32px; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .guided-tours-form {
     padding: 50px 0;
     background-color: #f9f9f9;
@@ -20,20 +46,20 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.5rem;
-    color: #343a40;
+    color: #1d365e;
 }
 
 .guided-tours-form p {
     text-align: center;
-    color: #6c757d;
+    color: #1d365e;
     margin-bottom: 30px;
 }
 
 .guided-tours-form form {
     max-width: 600px;
     width: 100%;
-    padding: 20px;
-    background-color: #ffffff;
+    padding: 30px;
+    background-color: #f7fafc;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -49,21 +75,22 @@ body {
 .guided-tours-form select,
 .guided-tours-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .guided-tours-form button {
     display: block;
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 12px;
+    background-color: #021b36;
     color: #ffffff;
     border: none;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -72,66 +99,60 @@ body {
     background-color: #0056b3;
 }
 
-/* Photos Section */
-.guided-tours-form .row img {
+
+.photos img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.guided-tours-form .row img:hover {
+.photos img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
+.photos p {
+    text-align: center;
+    margin-top: 10px;
+    color: #6c757d;
+}
+
 .footer {
-    background-color: #f8f9fa;
+    background-color: #0b1038;
+    color: #bfbfdb;
     padding: 20px;
     text-align: center;
 }
 
-.footer p {
-    margin: 0;
-    color: #6c757d;
-}
-
-.footer a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
 .footer a:hover {
-    color: #0056b3;
+    color: white;
+    text-decoration: underline;
 }
 
-/* Navbar */
-.navbar-nav {
-    margin-left: auto;
-}
 
-.navbar-brand {
-    font-weight: bold;
-    color: #007bff;
-}
+@media (max-width: 767px) {
+    .guided-tours-form form {
+        padding: 20px;
+    }
 
-.navbar-brand:hover {
-    color: #0056b3;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hero h1 {
+    .guided-tours-form h2 {
         font-size: 2rem;
     }
 
-    .guided-tours-form {
-        padding: 30px 10px;
+    .photos img {
+        height: 200px;
     }
 
-    .guided-tours-form form {
-        padding: 15px;
+    .navbar-nav {
+        text-align: center;
+    }
+
+    nav.navbar .navbar-brand,
+    nav.navbar .nav-link {
+        font-size: 0.9rem;
     }
 }

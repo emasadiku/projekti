@@ -3,84 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Rome</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <title>Explore Vienna </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family:'Lucida Sans', Verdana, sans-serif;
             line-height: 1.6;
         }
+
         .hero {
-            background: url('https://via.placeholder.com/1920x300') no-repeat center center/cover;
-            color: white;
+            background: url('vienna2.7.jpg') no-repeat center center/cover;
+            color: rgb(255, 254, 254);
             height: 30vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             flex-direction: column;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #050b3c43;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 0;
-            margin-bottom: 3px;
-            
+            z-index: 1;
         }
 
         .hero h4 {
-            font-size: 1.5rem;
-            margin: 0;
-            font-family: 'Lucida Sans';
+            font-size: 1.8rem;
+            font-weight: 400;
+            z-index: 1;
         }
 
         .container {
-            padding: 30px;
+            padding: 60px 30px;
         }
+
         .info-section {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            justify-content: space-between;
             gap: 20px;
+            padding: 20px;
+            background-color: #f9f9ff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
+
         .info-section img {
             width: 100%;
-            max-width: 400px;
-            height: auto;
+            max-width: 450px;
+            height: 300px;
             border-radius: 10px;
             object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .info-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
         .info {
             flex: 1;
+            margin-left: 20px;
         }
-        .info-section.flex-row-reverse {
-            flex-direction: row-reverse;
+
+        .info h5 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1d365e;
         }
+
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            margin: 8px 0;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        
         .footer {
-            background-color: #f8f9fa;
-            padding: 20px;
+            background-color: #0b1038;
+            color: #bfbfdb;
             text-align: center;
+
+        }
+        
+
+        .footer {
+            background-color: #0b1038;
+            color: #bfbfdb;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
         }
 
         .navbar-nav {
-        margin-left: auto;
-    }
+            margin-left: auto;
+        }
+
+        nav.navbar{
+            background-color: #0b1038;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        nav.navbar .navbar-brand, 
+        nav.navbar .nav-link {
+            color: #dce6f4; 
+        }
+
+        nav.navbar .nav-link:hover {
+            color: #ffffff;
+
+        }
+
+        .navbar-brand{
+            font-family: 'Pacifico', cursive; 
+            font-size: 32px; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title{
+            color: #173c78;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h4 {
+                font-size: 1.2rem;
+            }
+
+            .info-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info {
+                text-align: center;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+
+            nav.navbar .navbar-brand,
+            nav.navbar .nav-link {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h4 {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .info-section img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="blogg.html">agency_name</a>
+          <a class="navbar-brand" href="blogg.html">TripTastic</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link active" href="blogg.html#about-us">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="blogg.html#about-us">About Us</a></li>
               <li class="nav-item"><a class="nav-link" href="blogg.html#explore">Explore</a></li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tours</a>
@@ -91,78 +223,160 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="blogg.html#contact-us">Contact Us</a></li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
-      </nav>
-
+    </nav>
 
     <div class="hero">
         <h1>Explore Vienna</h1>
-        <br>
         <h4>Everything you need to know before visiting</h4>
     </div>
-
 
     <section class="container">
 
         <div class="info-section">
             <div class="info">
-                <h5>Essential Info</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui.</p>
+                <h5>Essential Information</h5>
+                <ul>
+                    <li><strong><i>Currency:</i></strong> Euro (€)</li>
+                    <li><strong><i>Language:</i></strong> German (learn basic phrases like "Guten Tag" (Hello) and "Danke" (Thank you)). English is widely spoken in tourist areas.</li>
+                    <li><strong><i>Getting Around:</i></strong>
+                        <ul>
+                            <li>-> Vienna’s public transport system (U-Bahn, trams, buses) is efficient and easy to use.</li>
+                            <li>-> Purchase a Vienna City Card for unlimited public transport and discounts at attractions.</li>
+                            <li>-> Walking is ideal in the city center due to Vienna's compact layout.</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <img src="https://via.placeholder.com/400x300" alt="Essential Info Image">
+            <img src="vienna2.3.jpg" alt="Vienna Image">
         </div>
-
-
-        <div class="info-section flex-row-reverse">
-            <div class="info">
-                <h5>Travel Tips</h5>
-                <p>Quisque ac magna a ligula vehicula viverra. Nullam nec felis ac lectus aliquam tincidunt ut at velit.</p>
-            </div>
-            <img src="https://via.placeholder.com/400x300" alt="Travel Tips Image">
-        </div>
-
 
         <div class="info-section">
-            <div class="info">
-                <h5>History & Culture</h5>
-                <p>Mauris at lectus vel ex euismod vehicula. Fusce ut massa et sem malesuada tincidunt in ut erat.</p>
-            </div>
-            <img src="https://via.placeholder.com/400x300" alt="History and Culture Image">
-        </div>
-
-        <div class="info-section flex-row-reverse">
             <div class="info">
                 <h5>Top Attractions</h5>
-                <p>Curabitur non risus libero. Fusce nec odio eu mi blandit efficitur sed eu turpis.</p>
+                <ul>
+                    <li><strong>Schönbrunn Palace:</strong> A UNESCO World Heritage site with stunning gardens and an opulent palace interior.</li>
+                    <li><strong>Hofburg Palace:</strong> Former imperial residence with fascinating museums, including the Sisi Museum.</li>
+                    <li><strong>St. Stephen’s Cathedral:</strong> An iconic gothic masterpiece in the heart of Vienna.</li>
+                    <li><strong>Belvedere Palace:</strong> Home to an impressive art collection, including Gustav Klimt’s "The Kiss."</li>
+                    <li><strong>Prater and the Giant Ferris Wheel:</strong> A historic amusement park offering great views of Vienna.</li>
+                    <li><strong>Vienna State Opera:</strong> Renowned for its performances and architectural beauty.</li>
+                </ul>
             </div>
-            <img src="https://via.placeholder.com/400x300" alt="Top Attractions Image">
+            <img src="vienna2.9.jpg" alt="Vienna Attractions">
         </div>
 
         <div class="info-section">
             <div class="info">
-                <h5>Food & Drinks</h5>
-                <p>Donec sollicitudin, mi a aliquam luctus, mauris urna malesuada lectus, vel tristique mi ipsum eget leo.</p>
+                <h5>Best Restaurants</h5>
+                <ul>
+                    <li><strong><i>For Austrian Cuisine:</i></strong>
+                        <ul>
+                            <li><strong>Figlmüller:</strong> Famous for its oversized schnitzels.</li>
+                            <li><strong>Plachutta Wollzeile:</strong> Renowned for Tafelspitz (boiled beef).</li>
+                            <li><strong>Gasthaus Pöschl:</strong> A cozy spot for traditional Viennese dishes.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>International Cuisine:</i></strong>
+                        <ul>
+                            <li><strong>Das Loft:</strong> A rooftop restaurant offering modern cuisine and breathtaking views.</li>
+                            <li><strong>ef16 Restaurant:</strong> Known for its creative and seasonal menu.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>Cafés and Desserts:</i></strong>
+                        <ul>
+                            <li><strong>Café Sacher:</strong> Try the original Sachertorte.</li>
+                            <li><strong>Café Central:</strong> A historic café loved by famous intellectuals.</li>
+                            <li><strong>Demel:</strong> Renowned for its pastries and strudels.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>Vineyards and Wine Bars:</i></strong>
+                        <ul>
+                            <li><strong>Weingut Heuriger Hirt:</strong> Enjoy Austrian wines and traditional snacks.</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <img src="https://via.placeholder.com/400x300" alt="Food and Drinks Image">
+            <img src="viennafood.jpg" alt="Vienna Restaurants">
         </div>
-    </section>
 
-
-    <footer class="text-center py-3">
-        <div class="container">
-            <p>Follow Us: 
-                <a href="#">Instagram</a> 
-                <a href="#">Facebook</a> 
-                <a href="#">LinkedIn</a>
-            </p>
-            <p>&copy; 2024 PhotoStudio. All rights reserved.</p>
+        <div class="info-section">
+            <div class="info">
+                <h5>Best Time to Visit</h5>
+                <ul>
+                    <li><strong>Spring (April to June):</strong> Pleasant weather with blooming parks and gardens.</li>
+                    <li><strong>Fall (September to November):</strong> Crisp weather and fewer tourists.</li>
+                    <li><strong>Winter (November to December):</strong> Magical Christmas markets and festive decorations.</li>
+                    <li><strong>Avoid:</strong> July and August if you want to avoid the heat and crowds.</li>
+                </ul>
+            </div>
+            <img src="vienna2.5.jpg" alt="Best Time to Visit Vienna">
         </div>
-    </footer>
-
+        
+        <div class="info-section">
+            <div class="info">
+                <h5>Shopping in Vienna</h5>
+                <ul>
+                    <li><strong>Kärntnertorstraße:</strong> A popular shopping street with a mix of international and local brands.</li>
+                    <li><strong>Graben:</strong> A prestigious street offering luxury boutiques, high-end fashion, and jewelry.</li>
+                    <li><strong>Mariahilfer Straße:</strong> Vienna's largest shopping street, home to a wide range of shops, from department stores to trendy boutiques.</li>
+                    <li><strong>Donau Zentrum:</strong> One of Vienna’s largest shopping malls with a variety of shops, restaurants, and entertainment options.</li>
+                    <li><strong>Parndorf Fashion Outlet:</strong> Located just outside Vienna, it offers discounted designer brands and is a popular shopping destination for bargain hunters.</li>
+                </ul>
+            </div>
+            <img src="viennashops.jpg" alt="Shopping in Vienna">
+        </div>
+        
+        <div class="info-section ">
+            <div class="info">
+                <h5>Tips for Tourists</h5>
+                <ul>
+                    <li><strong>Public Transport:</strong> Validate your ticket before traveling to avoid fines.</li>
+                    <li><strong>Book in Advance:</strong> Popular attractions like Schönbrunn Palace and Vienna State Opera often sell out.</li>
+                    <li><strong>Local Etiquette:</strong> Be punctual, say "Grüß Gott" (Hello), and don’t jaywalk.</li>
+                    <li><strong>Tipping:</strong> Round up the bill or leave 5-10% in restaurants.</li>
+                    <li><strong>Drinking Water:</strong> Tap water is high-quality and safe to drink.</li>
+                    <li><strong>City Card:</strong> The Vienna City Card offers unlimited transport and discounts at attractions.</li>
+                </ul>
+            </div>
+            <img src="vienna2.8.jpg" alt="Tips for Tourists in Vienna">
+        </div>
+        
+        <div class="info-section">
+            <div class="info">
+                <h5>Bonus Experiences</h5>
+                <ul>
+                    <li><strong><i>Day Trips:</i></strong>
+                        <ul>
+                            <li><strong>Wachau Valley:</strong> Visit the scenic vineyards and historic Melk Abbey.</li>
+                            <li><strong>Bratislava:</strong> A quick trip to Slovakia's charming capital.</li>
+                            <li><strong>Salzburg:</strong> Explore Mozart’s birthplace and beautiful alpine scenery.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>Hidden Gems:</i></strong>
+                        <ul>
+                            <li><strong>Augarten:</strong> A tranquil park with art and porcelain exhibits.</li>
+                            <li><strong>Hundertwasserhaus:</strong> A quirky, colorful apartment complex designed by Friedensreich Hundertwasser.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Nightlife:</strong> Explore rooftop bars like 25hours Hotel Dachboden or enjoy classical concerts at the Musikverein.</li>
+                    <li><strong>Vineyards:</strong> Vienna is the only capital city with its own vineyards—try local wines at a Heuriger (wine tavern).</li>
+                </ul>
+            </div>
+            <img src="vienna2.11.jpg" alt="Bonus Experiences in Vienna">
+        </div>
+        
+</section>
+<footer class="footer custom-footer">
+    <div class="footercontainer">
+        <p>Follow Us: 
+            <a href="#">Instagram</a> 
+            <a href="#">Facebook</a> 
+            <a href="#">LinkedIn</a>
+        </p>
+        <p>&copy; 2024 TripTastic. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>

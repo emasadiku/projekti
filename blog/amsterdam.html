@@ -3,84 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Rome</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <title>Explore Amsterdam </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family:'Lucida Sans', Verdana, sans-serif;
             line-height: 1.6;
         }
+
         .hero {
-            background: url('https://via.placeholder.com/1920x300') no-repeat center center/cover;
-            color: white;
+            background: url('ams2.1.jpg') no-repeat center center/cover;
+            color: rgb(255, 254, 254);
             height: 30vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             flex-direction: column;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #050b3c43;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 0;
-            margin-bottom: 3px;
-            
+            z-index: 1;
         }
 
         .hero h4 {
-            font-size: 1.5rem;
-            margin: 0;
-            font-family: 'Lucida Sans';
+            font-size: 1.8rem;
+            font-weight: 400;
+            z-index: 1;
         }
 
         .container {
-            padding: 30px;
+            padding: 60px 30px;
         }
+
         .info-section {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            justify-content: space-between;
             gap: 20px;
+            padding: 20px;
+            background-color: #f9f9ff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
+
         .info-section img {
             width: 100%;
-            max-width: 400px;
-            height: auto;
+            max-width: 450px;
+            height: 300px;
             border-radius: 10px;
             object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .info-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
         .info {
             flex: 1;
+            margin-left: 20px;
         }
-        .info-section.flex-row-reverse {
-            flex-direction: row-reverse;
+
+        .info h5 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1d365e;
         }
+
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            margin: 8px 0;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
         .footer {
-            background-color: #f8f9fa;
-            padding: 20px;
+            background-color: #0b1038;
+            color: #bfbfdb;
             text-align: center;
+            padding: 20px;
+        }
+
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
         }
 
         .navbar-nav {
-        margin-left: auto;
-    }
+            margin-left: auto;
+        }
+
+        nav.navbar{
+            background-color: #0b1038;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        nav.navbar .navbar-brand, 
+        nav.navbar .nav-link {
+            color: #dce6f4; 
+        }
+
+        nav.navbar .nav-link:hover {
+            color: #ffffff;
+
+        }
+
+        .navbar-brand{
+            font-family: 'Pacifico', cursive; 
+            font-size: 32px; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .destination-grid {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .section-title{
+            color: #173c78;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h4 {
+                font-size: 1.2rem;
+            }
+
+            .info-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info {
+                text-align: center;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+
+            nav.navbar .navbar-brand,
+            nav.navbar .nav-link {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h4 {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .info-section img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="blogg.html">agency_name</a>
+          <a class="navbar-brand" href="blogg.html">TripTastic</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link active" href="blogg.html#about-us">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="blogg.html#about-us">About Us</a></li>
               <li class="nav-item"><a class="nav-link" href="blogg.html#explore">Explore</a></li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tours</a>
@@ -91,78 +216,171 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="blogg.html#contact-us">Contact Us</a></li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
-      </nav>
-
+    </nav>
 
     <div class="hero">
         <h1>Explore Amsterdam</h1>
-        <br>
         <h4>Everything you need to know before visiting</h4>
     </div>
-
 
     <section class="container">
 
         <div class="info-section">
             <div class="info">
-                <h5>Essential Info</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui.</p>
+                <h5>Essential Information</h5>
+                <ul>
+                    <li><strong><i>Currency</i>:</strong> Euro (€)</li>
+                    <li><strong><i>Language:</i></strong> Dutch (English is widely spoken in tourist areas).</li>
+                    <li><strong><i>Getting Around:</i></strong>
+                        <ul>
+                            <li>-> Use OV-chipkaart for public transport (trams, buses, metro).</li>
+                            <li>-> Bicycles are the most popular way to get around. Bike rentals are available throughout the city.</li>
+                            <li>-> Walking is easy and enjoyable in central Amsterdam.</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <img src="https://via.placeholder.com/400x300" alt="Essential Info Image">
+            <img src="ams2.4.jpg" alt="Essential Information for Amsterdam">
         </div>
-
-
-        <div class="info-section flex-row-reverse">
-            <div class="info">
-                <h5>Travel Tips</h5>
-                <p>Quisque ac magna a ligula vehicula viverra. Nullam nec felis ac lectus aliquam tincidunt ut at velit.</p>
-            </div>
-            <img src="https://via.placeholder.com/400x300" alt="Travel Tips Image">
-        </div>
-
-
+        
         <div class="info-section">
-            <div class="info">
-                <h5>History & Culture</h5>
-                <p>Mauris at lectus vel ex euismod vehicula. Fusce ut massa et sem malesuada tincidunt in ut erat.</p>
-            </div>
-            <img src="https://via.placeholder.com/400x300" alt="History and Culture Image">
-        </div>
-
-        <div class="info-section flex-row-reverse">
             <div class="info">
                 <h5>Top Attractions</h5>
-                <p>Curabitur non risus libero. Fusce nec odio eu mi blandit efficitur sed eu turpis.</p>
+                <ul>
+                    <li><strong>Rijksmuseum:</strong> A world-renowned museum showcasing masterpieces by Dutch artists like Rembrandt and Vermeer.</li>
+                    <li><strong>Van Gogh Museum:</strong> Dedicated to the life and works of Vincent van Gogh.</li>
+                    <li><strong>Anne Frank House:</strong> Explore the secret annex where Anne Frank wrote her famous diary during WWII.</li>
+                    <li><strong>Canal Cruises:</strong> Admire the iconic canals and historic architecture from the water.</li>
+                    <li><strong>Dam Square:</strong> The bustling heart of Amsterdam, home to the Royal Palace and National Monument.</li>
+                    <li><strong>Vondelpark:</strong> A peaceful retreat for walking, cycling, and picnicking.</li>
+                </ul>
             </div>
-            <img src="https://via.placeholder.com/400x300" alt="Top Attractions Image">
+            <img src="ams2.7.jpg" alt="Top Attractions in Amsterdam">
         </div>
+     
+        <div class="info-section">
+            <div class="info">
+                <h5>Best Restaurants</h5>
+                <ul>
+                    <li><strong><i>Traditional Dutch Cuisine:</i></strong>
+                        <ul>
+                            <li><strong>Moeders:</strong> Famous for its Dutch home-cooked meals.</li>
+                            <li><strong>The Pantry:</strong> Offers hearty Dutch dishes like stamppot and bitterballen.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>Seafood:</i></strong>
+                        <ul>
+                            <li><strong>The Seafood Bar:</strong> Known for its fresh fish and shellfish.</li>
+                            <li><strong>Stroop:</strong> A great spot for Dutch pancakes and fresh herring.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>International Cuisine:</i></strong>
+                        <ul>
+                            <li><strong>Foodhallen:</strong> An indoor food market with a variety of international dishes.</li>
+                            <li><strong>Restaurant Blauw:</strong> Specializing in Indonesian rijsttafel.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>Desserts and Snacks:</i></strong>
+                        <ul>
+                            <li><strong>Van Stapele Koekmakerij:</strong> Famous for its cookies.</li>
+                            <li><strong>Winkel 43:</strong> Renowned for its apple pie.</li>
+                            <li><strong>Febo:</strong> Try the vending machine-style snacks like kroketten.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <img src="amsfood1.jpg" alt="Best Restaurants in Amsterdam">
+        </div>
+        
 
         <div class="info-section">
             <div class="info">
-                <h5>Food & Drinks</h5>
-                <p>Donec sollicitudin, mi a aliquam luctus, mauris urna malesuada lectus, vel tristique mi ipsum eget leo.</p>
+                <h5>Best Time to Visit</h5>
+                <ul>
+                    <li><strong>Spring (April to May):</strong> Witness the tulip season and enjoy mild weather.</li>
+                    <li><strong>Summer (June to August):</strong> Great for outdoor activities and festivals.</li>
+                    <li><strong>Fall (September to November):</strong> Fewer crowds and vibrant autumn colors.</li>
+                    <li><strong>Winter (December to February):</strong> Experience the Amsterdam Light Festival and cozy winter vibes.</li>
+                </ul>
             </div>
-            <img src="https://via.placeholder.com/400x300" alt="Food and Drinks Image">
+            <img src="ams2.5.jpg" alt="Best Time to Visit Amsterdam">
         </div>
-    </section>
-
-
-    <footer class="text-center py-3">
-        <div class="container">
-            <p>Follow Us: 
-                <a href="#">Instagram</a> 
-                <a href="#">Facebook</a> 
-                <a href="#">LinkedIn</a>
-            </p>
-            <p>&copy; 2024 PhotoStudio. All rights reserved.</p>
+        
+        <div class="info-section">
+            <div class="info">
+                <h5>Shopping in Amsterdam</h5>
+                <ul>
+                    <li><strong>Kalverstraat:</strong> Amsterdam’s busiest shopping street, offering a mix of high-street brands, department stores, and international fashion.</li>
+                    <li><strong>9 Streets (De Negen Straatjes):</strong> A charming neighborhood with boutique shops, vintage stores, and unique local fashion.</li>
+                    <li><strong>Leidsestraat:</strong> A popular street with both high-end shops and trendy fashion stores, perfect for those looking to browse.</li>
+                    <li><strong>Albert Cuyp Market:</strong> A bustling street market in the De Pijp district, ideal for souvenirs, local products, and fresh food.</li>
+                    <li><strong>Magna Plaza:</strong> A grand shopping mall housed in a former post office, offering a variety of luxury brands and shops.</li>
+                    <li><strong>Haarlemmerstraat & Haarlemmerdijk:</strong> Known for its diverse range of shops, from quirky fashion stores to artisanal goods.</li>
+                </ul>
+            </div>
+            <img src="amsshops.jpg" alt="Shopping in Amsterdam">
         </div>
-    </footer>
+        
+        <div class="info-section">
+            <div class="info">
+                <h5>Tips for Tourists in Amsterdam</h5>
+                <ul>
+                    <li><strong>Public Transport:</strong> Purchase an OV-chipkaart for easy access to trams, buses, and metro.</li>
+                    <li><strong>Cycling:</strong> Rent a bike to explore the city like a local but follow cycling rules.</li>
+                    <li><strong>Booking:</strong> Book popular attractions (Anne Frank House, Van Gogh Museum) in advance to avoid long queues.</li>
+                    <li><strong>Avoid Peak Hours:</strong> Visit tourist spots early in the morning or late in the afternoon to avoid crowds.</li>
+                    <li><strong>Tipping:</strong> Not mandatory but appreciated; round up to the nearest euro in restaurants.</li>
+                    <li><strong>Local Etiquette:</strong> Don’t walk in bike lanes, and respect the locals’ need for space in crowded areas.</li>
+                </ul>
+            </div>
+            <img src="ams2.6.jpg" alt="Tips for Tourists in Amsterdam">
+        </div>
+        
+        
+        <div class="info-section">
+            <div class="info">
+                <h5>Bonus Experiences in Amsterdam</h5>
+                <ul>
+                    <li><strong><i>Day Trips:</i></strong>
+                        <ul>
+                            <li><strong>Zaanse Schans:</strong> A nearby village with traditional windmills and crafts.</li>
+                            <li><strong>Keukenhof Gardens:</strong> Famous for its stunning tulip displays (spring only).</li>
+                            <li><strong>Volendam & Marken:</strong> Quaint fishing villages with old-world charm.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>Hidden Gems:</i></strong>
+                        <ul>
+                            <li><strong>NDSM Wharf:</strong> A trendy area with street art and creative spaces.</li>
+                            <li><strong>Begijnhof:</strong> A peaceful courtyard hidden in the heart of the city.</li>
+                        </ul>
+                    </li>
+                    <li><strong><i>Nightlife:</i></strong>
+                        <ul>
+                            <li>Enjoy vibrant nightlife in areas like Leidseplein and Rembrandtplein.</li>
+                            <li>Visit bars like Café Hoppe or try canal-side dining.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Specialty Coffeeshops:</strong> Explore Amsterdam’s famous coffeeshop culture responsibly.</li>
+                </ul>
+            </div>
+            <img src="ams2.8.jpg" alt="Bonus Experiences in Amsterdam">
+        </div>
+        
+        
+</section>
+
+<footer class="footer custom-footer">
+    <div class="footercontainer">
+        <p>Follow Us: 
+            <a href="#">Instagram</a> 
+            <a href="#">Facebook</a> 
+            <a href="#">LinkedIn</a>
+        </p>
+        <p>&copy; 2024 TripTastic. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
